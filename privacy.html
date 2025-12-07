@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoMentor - AI Photo Critic Chrome Extension</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Настройка шрифтов и цветов */
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-50 flex flex-col min-h-screen">
+
+    <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
+                    <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">PhotoMentor</span>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-slate-300">
+                <a href="#features" class="hover:text-white transition-colors">Features</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                <a href="mailto:support@ropeloozo.com" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="py-20 md:py-32 px-6 text-center max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 via-white to-indigo-200">
+                AI-Powered Professional Photo Critique
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                Get instant, constructive feedback on your photography directly in your browser. Analyze composition, lighting, and technical execution with one click.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-full transition-all shadow-lg shadow-indigo-500/25">
+                    Add to Chrome
+                </a>
+                <a href="#features" class="px-8 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-full border border-slate-700 transition-all">
+                    Learn More
+                </a>
+            </div>
+            
+            <div class="mt-16 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/50">
+                <img src="https://via.placeholder.com/1000x600/1e293b/94a3b8?text=PhotoMentor+Interface+Preview" alt="App Screenshot" class="w-full h-auto opacity-90">
+            </div>
+        </section>
+
+        <section id="features" class="py-20 bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl bg-slate-950 border border-slate-800">
+                    <div class="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4 text-indigo-400">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Instant Analysis</h3>
+                    <p class="text-slate-400 text-sm">Upload any photo and get a comprehensive critique in seconds using advanced Gemini AI.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-950 border border-slate-800">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Detailed Regions</h3>
+                    <p class="text-slate-400 text-sm">Visual bounding boxes highlight specific areas of strength or weakness in your composition.</p>
+                </div>
+                <div class="p-6 rounded-xl bg-slate-950 border border-slate-800">
+                    <div class="w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center mb-4 text-amber-400">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Improvement Tips</h3>
+                    <p class="text-slate-400 text-sm">Don't just get a score. Get actionable advice on how to make your next shot better.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="py-20 px-6 max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-10">Simple, Transparent Pricing</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-2xl border border-slate-800 bg-slate-900/30 flex flex-col">
+                    <h3 class="text-xl font-semibold text-slate-300">Starter</h3>
+                    <div class="text-4xl font-bold my-4">Free</div>
+                    <ul class="text-left text-slate-400 space-y-3 mb-8 flex-1">
+                        <li>• 5 analyses per day</li>
+                        <li>• Basic composition score</li>
+                        <li>• Standard processing speed</li>
+                    </ul>
+                    <a href="#" class="py-3 rounded-lg border border-slate-700 hover:bg-slate-800 transition">Install Now</a>
+                </div>
+                <div class="p-8 rounded-2xl border border-indigo-500/30 bg-indigo-900/10 flex flex-col relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-indigo-600 text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
+                    <h3 class="text-xl font-semibold text-indigo-300">Pro</h3>
+                    <div class="text-4xl font-bold my-4">$9.99<span class="text-lg text-slate-500 font-normal">/mo</span></div>
+                    <ul class="text-left text-slate-300 space-y-3 mb-8 flex-1">
+                        <li>• Unlimited analyses</li>
+                        <li>• Detailed bounding boxes</li>
+                        <li>• Detailed light & color critique</li>
+                        <li>• Priority support</li>
+                    </ul>
+                    <a href="#" class="py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition shadow-lg shadow-indigo-500/20">Upgrade to Pro</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800 bg-slate-950 py-12 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+            <div>
+                &copy; 2025 PhotoMentor. All rights reserved.
+            </div>
+            <div class="flex gap-6">
+                <a href="/privacy.html" class="hover:text-slate-300">Privacy Policy</a>
+                <a href="/terms.html" class="hover:text-slate-300">Terms of Service</a>
+                <a href="mailto:support@ropeloozo.com" class="hover:text-slate-300">support@ropeloozo.com</a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-8 text-xs text-slate-600 text-center">
+            PhotoMentor is a Chrome Extension powered by AI. Not affiliated with Google.
+        </div>
+    </footer>
+
+</body>
+</html>
